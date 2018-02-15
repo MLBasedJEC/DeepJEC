@@ -3,4 +3,5 @@
 *.pkl
 *.pdf
 *.h5
+*.hdf5
 *.ipynb_checkpoints
