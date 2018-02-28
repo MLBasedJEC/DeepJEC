@@ -13,7 +13,7 @@ def profile_data(x, y, nbins, xlow, xhigh, colors, plabels, title="", xlabel="",
         for ibin in range(nbins):
             bin_entries = ydata[(x>bins[ibin]) & (x<=bins[ibin+1])]
             means.append(bin_entries.mean())
-            err.append(bin_entries.sem())
+            err.append(np.std(bin_entries)/np.sqrt(len(bin_entries)))
 
         plt.xlim(xlow, xhigh)  
         plt.scatter(bin_center, means, marker='o', color=colors[i], label=plabels[i])
